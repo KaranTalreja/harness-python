@@ -47,7 +47,7 @@ pipeline:
                     connectorRef: GCPConnector
                     host: us-west2-docker.pkg.dev
                     projectID: divine-command-449608-p0
-                    imageName: harness-repo
+                    imageName: harness-repo/harness-python
                     tags:
                       - latest
                     caching: true
