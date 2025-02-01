@@ -1,0 +1,14 @@
+inputSet:
+  name: harness-input
+  identifier: harnessinput
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: buildandpush
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
