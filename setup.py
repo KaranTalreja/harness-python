@@ -19,7 +19,7 @@ setup(
     license='Apache 2.0 License',
     keywords='drone ci examplei',
     url='https://github.com/drone-demos/drone-with-python',
-    install_requires=['flask'],
+    install_requires=['flask==3.1.0'],
     entry_points={
         'console_scripts': [
             'dronedemo = dronedemo.scripts.dronedemo:cli_entry',
