@@ -1,0 +1,44 @@
+pipeline:
+  name: build-and-push
+  identifier: buildandpush
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1738313085821
+        repoName: KaranTalreja/harness-python
+        build: <+input>
+  stages:
+    - stage:
+        name: build
+        identifier: build
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+          buildIntelligence:
+            enabled: true
+          platform:
+            os: Linux
+            arch: Arm64
+          runtime:
+            type: Docker
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: BuildAndPushGAR
+                  name: BuildAndPushGAR_1
+                  identifier: BuildAndPushGAR_1
+                  spec:
+                    connectorRef: GCPConnector
+                    host: us-west2-docker.pkg.dev
+                    projectID: divine-command-449608-p0
+                    imageName: harness-python
+                    tags:
+                      - latest
+                    caching: true
