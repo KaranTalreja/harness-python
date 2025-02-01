@@ -41,15 +41,8 @@ pipeline:
                         identifier: GitClone_1
                         spec:
                           connectorRef: account.Github_OAuth_1738313085821
-                          repoName: KaranTalreja/harness-python/
+                          repoName: KaranTalreja/harness-python.git
                           build:
                             type: branch
                             spec:
                               branch: master
-              - step:
-                  type: Run
-                  name: Run_1
-                  identifier: Run_1
-                  spec:
-                    shell: Sh
-                    command: echo "Hello world"
