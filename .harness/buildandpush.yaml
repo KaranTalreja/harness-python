@@ -31,6 +31,15 @@ pipeline:
           execution:
             steps:
               - step:
+                  type: Run
+                  name: Lint
+                  identifier: Lint
+                  spec:
+                    shell: Sh
+                    command: |-
+                      pip install flake8
+                      flake8 .
+              - step:
                   type: BuildAndPushGAR
                   name: BuildAndPushGAR_1
                   identifier: BuildAndPushGAR_1
