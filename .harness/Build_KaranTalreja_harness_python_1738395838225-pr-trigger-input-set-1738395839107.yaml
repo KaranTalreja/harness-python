@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_KaranTalreja_harness_python_1738395838225-pr-trigger-input-set
+  identifier: Build_KaranTalreja_harness_python_1738395838225prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_KaranTalreja_harness_python_1738395838225
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
