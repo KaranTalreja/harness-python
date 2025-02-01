@@ -1,0 +1,11 @@
+inputSet:
+  name: harness-artifact-input
+  identifier: harnessartifactinput
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: buildandpush
+    properties:
+      ci:
+        codebase:
+          build: <+input>
