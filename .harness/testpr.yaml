@@ -41,7 +41,7 @@ pipeline:
                         identifier: GitClone_1
                         spec:
                           connectorRef: account.Github_OAuth_1738313085821
-                          repoName: KaranTalreja/harness-python.git
+                          repoName: KaranTalreja/harness-python
                           build:
                             type: branch
                             spec:
