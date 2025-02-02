@@ -1,0 +1,17 @@
+template:
+  name: PushGarTemplete
+  type: Step
+  projectIdentifier: default_project
+  orgIdentifier: default
+  spec:
+    type: BuildAndPushGAR
+    spec:
+      connectorRef: GCPConnector
+      host: us-west2-docker.pkg.dev
+      projectID: divine-command-449608-p0
+      imageName: harness-repo/harness-python
+      tags:
+        - latest
+      caching: true
+  identifier: PushGarTemplete
+  versionLabel: "1.0"
